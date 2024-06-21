@@ -29,7 +29,7 @@ public class LicenseBot {
         shardManager.addEventListener(new GenerateLicense());
     }
 
-    public boolean checkLicense(String license, String plugin) {
+    public static boolean checkLicense(String license, String plugin) {
         return SQLiteDataSource.checkLicense(license, plugin);
     }
 
@@ -42,7 +42,7 @@ public class LicenseBot {
     }
 
     public static void main(String[] args) throws SQLException {
-        LicenseBot bot = new LicenseBot();
+        new LicenseBot();
 
     }
 }
